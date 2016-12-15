@@ -1,0 +1,10 @@
+Package: gcode-tools
+Version: 0.1
+Section: utils
+Priority: optional
+Architecture: all
+Essential: no
+Depends: python
+Maintainer: Matthew David Elgert (mdelgert@yahoo.com) 
+Description: Debian 8 gcode-tools for use with linuxcnc or reprap 3D printers.
+https://github.com/VESSEA/gcode-tools
