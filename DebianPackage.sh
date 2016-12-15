@@ -3,17 +3,17 @@ $appName = "gcode-tools"
 
 echo "Build begin."
 echo "Copying files..."
-cp LICENSE usr/share/doc/gcode-tools/LICENSE
-cp README.md usr/share/doc/gcode-tools/README.md
-cd ..
+rm -r ./Build
+cp LICENSE Dev/usr/share/doc/gcode-tools/LICENSE
+cp README.md Dev/usr/share/doc/gcode-tools/README.md
+mkdir ./Build
+mkdir ./Build/gcode-tools
+cp -R Dev/DEBIAN ./Build/gcode-tools
+cp -R Dev/usr ./Build/gcode-tools
+cd ./Build
 echo "Creating Debian 8 Package..."
 fakeroot dpkg-deb --build gcode-tools
-cp gcode-tools.deb gcode-tools/gcode-tools.deb
-echo "Cleanup..."
-rm gcode-tools.deb
 echo "Build end."
-
-cd gcode-tools
 
 while true; do
     read -p "Do you wish to remove previous?" yn
