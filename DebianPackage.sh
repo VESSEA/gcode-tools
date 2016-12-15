@@ -1,6 +1,5 @@
 #!/bin/bash
 $appName = "gcode-tools"
-#TEST
 echo "Build begin."
 echo "Copying files..."
 rm -r ./Build
